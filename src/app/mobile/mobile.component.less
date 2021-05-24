@@ -1,0 +1,84 @@
+.background {
+  --background: linear-gradient(197deg, rgba(100, 100, 100, 1) 0%, rgba(63, 63, 63, 1) 13.5%, rgba(29, 29, 29, 1) 33.33%, rgba(0, 0, 0, 1) 100%) !important;
+}
+
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+.seats {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+}
+
+.seat {
+  display: flex;
+  // flex: 0 0 14.28571428571429%;
+  padding: 5px;
+  position: relative;
+
+  &:nth-child(2) {
+    margin-right: 21.28571428571429%;
+  }
+}
+
+ion-list.row.row--10 .seats .seat:nth-child(2) {
+  margin-right: 3% !important;
+}
+
+.driver {
+  width: 20px;
+  margin-top: 50px;
+}
+
+.door {
+  left: 25.2%;
+  top: 86%;
+  transform: rotate(-90deg);
+  position: absolute;
+}
+
+img.seat {
+  width: 10px;
+  height: 10px;
+}
+
+ion-card.bus {
+  background-color: cornsilk;
+}
+ion-card.bookingArea {
+    width: fit-content;
+}
+ion-card.bookingArea {
+    width: fit-content;
+}
+ion-card-header {
+    color: black;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+.passengerLounge {
+    text-align: center;
+    padding: 5px;
+}
+ion-icon.passenger {
+    width: 20px;
+    height: 20px;
+}
+ion-card.waitingArea {
+    width: 13%;
+    height: fit-content;
+    margin-top: 27%;
+}
+ion-card.waitingArea {
+    width: 13%;
+    background-color: #44444444;
+    height: fit-content;
+    margin-top: 27%;
+}

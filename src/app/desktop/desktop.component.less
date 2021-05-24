@@ -1,0 +1,195 @@
+
+.background {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  background-size: cover;
+  background-position: center;
+  display: block;
+  overflow-y: hidden;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.bookingArea {
+  width: 16%;
+  height: 60%;
+  background: white;
+  margin-top: 5%;
+  margin-left: 5%;
+  padding: 3%;
+  box-shadow: 5px 5px 5px rgb(68 68 68 / 60%);
+}
+
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+.seats {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+}
+
+.seat {
+  display: flex;
+  // flex: 0 0 14.28571428571429%;
+  padding: 5px;
+  position: relative;
+
+  &:nth-child(2) {
+    margin-right: 21.28571428571429%;
+  }
+}
+
+li.row.row--10 .seats .seat:nth-child(2) {
+  margin-right: 3% !important;
+}
+
+.driver {
+  width: 20px;
+  margin-top: 50px;
+}
+
+.door {
+  left: 25.2%;
+  top: 86%;
+  transform: rotate(-90deg);
+  position: absolute;
+}
+
+img.seat {
+  width: 10px;
+  height: 10px;
+}
+
+.waitingArea {
+  background: #ffffff;
+  width: fit-content;
+  opacity: 0.5;
+  height: 10%;
+  margin-left: 3%;
+  margin-top: 19%;
+  display: flex;
+}
+
+img.passenger {
+  width: 35px;
+  height: 31px;
+}
+
+// .row{
+//     display:flex ;
+// }.button{
+.button {
+  user-select: none;
+  display: inline-block;
+  border: .2em solid;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  opacity: 0.6;
+  color: #FFF;
+
+  &__text {
+    display: block;
+    padding: 1em 2em;
+    text-transform: uppercase;
+    font-weight: bold;
+
+    &:before {
+      content: attr(title);
+    }
+
+    &--bis {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      opacity: 0;
+    }
+  }
+
+  &__mask {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: white;
+    transform: translateX(-100%) rotate(45deg);
+    transition: all 0.3s;
+  }
+}
+
+.button:hover {
+  opacity: 1;
+
+  .button__text {
+    animation: fx-text .3s ease-out;
+
+    &--bis {
+      animation: fx-text-bis .3s ease-out;
+    }
+  }
+
+  .button__mask {
+    animation: fx-mask .3s ease-out;
+  }
+}
+
+.button:active {
+  opacity: 1;
+  background: white;
+  color: inherit;
+}
+
+
+
+@keyframes fx-mask {
+  0% {
+    transform: translateX(-100%) rotate(45deg);
+  }
+
+  100% {
+    transform: translateX(100%) rotate(45deg);
+  }
+}
+
+@keyframes fx-text {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fx-text-bis {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.button {
+  position: absolute;
+  float: right;
+}
